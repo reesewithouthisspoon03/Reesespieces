@@ -14,7 +14,7 @@ elif cpu_rps == paper:
 elif cpu_rps == scissors:
         print "scissors"
 else:
-    player_rps = rock
+    print ("Something went wrong")
 if player_rps == cpu_rps:
     print ("tie")
 elif player_rps == "paper" and cpu_rps == "rock":
