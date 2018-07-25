@@ -29,3 +29,4 @@ elif player_rps == "scissors" and cpu_rps == "rock":
     print "You lose! Rock smashes scissors"
 elif player_rps == "scissors" and cpu_rps == "paper":
     print "You win! Scissors cuts paper"    
+    

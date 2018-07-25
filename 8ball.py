@@ -1,7 +1,7 @@
 import random
 def play():
     prob = random.random()
-    eightball_answer = random.randrange(1,8)
+    eightball_answer = random.randrange(1,16)
     player_input = raw_input ("Ask the magic 8 ball a question  ")
     print player_input
     if eightball_answer == 1:
@@ -36,17 +36,12 @@ def play():
         print "stop asking me questions"
         
 while True:
-    answer = raw_input("Do you want to ask the magic 8 ball another question  ")
+    answer = raw_input("Do you want to ask the magic 8 ball another question?  ")
     if answer == 'yes':
         play()
     elif answer == 'no':
         sure = raw_input("are you sure you want to quit?") 
         if sure == 'yes':
             break
-        else: answer = raw_input("Do you want to ask the magic 8 ball another question?  "
-        if answer == 'yes':
-            play()
-        else:
-            print "too bad, you should make up your mind"                play()
     else:
         print ("say 'yes' or 'no'")
