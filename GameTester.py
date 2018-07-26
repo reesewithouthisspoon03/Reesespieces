@@ -7,6 +7,9 @@ loading_screen2 = random.randrange(0,5)
 loading_screen3 = random.randrange(0,5)
 #variables
 health = 100
+strength = 10
+intelligence = 10
+agility = 10
 print ("A message from the Developer:")
 time.sleep(3)
 print '''Hi, thanks for playing my game, most likely you'll
@@ -30,7 +33,7 @@ def skyrim():
     time.sleep(3)
     print "G@F!C$ F@!iUR3 3J3CT!NG"
     time.sleep(5)
-    print "error, graphics attempt failed"
+    print "error, graphics load attempt failed"
     time.sleep(1)
     print "continue loading skyrim_80.exe"
     time.sleep(2)
@@ -76,12 +79,19 @@ def skyrim():
     time.sleep(2.5)
     print "loading complete, launching game"
     time.sleep(1)
-    print ""
+    print '''Hiding inside a fireplace was never on your to do list,
+but your parents helped you in, and pushed a button and a stone slab slid under your feet.
+You hear your mother whisper an enchantment and runes appear on the stone.
+You beg them to come too, dispite them having explained that they have to protect you.
+We'd seen trouble from our windows, I only had a glance, and what I saw seemed like a nightmare
+your parents assure you hadn't seen anything, but each passing second after only made the image more clear
+a demonic horde, at least 2 dozen.
+you heard them come in asking for you by name:'''
     name = raw_input("What's your name? ")
     if name == "Reese":
         print ("Return of the King")
     elif name == "tester":
-        print ("Thanks for testing my game! (The usual line is welcome ____, the blank being a name that isn't secret, I have easter eggs hidden, this name is one of them to the world of Skyrim")    
+        print ("Thanks for testing my game! (The usual line is Bring us ____, and we'll be on our way, the blank being a name that isn't secret, I have easter eggs hidden, this name is one of them to the world of Skyrim")    
     elif name == "dovahkiin":
         print "FUS RO DAH"
     elif name == "silence my brother":
@@ -91,12 +101,109 @@ def skyrim():
     elif name == "innocence my brother":
         print "Welcome home"
     else:
-        print ("Welcome", name, "to the world of Skyrim")
+        print ("You know why we're. Bring us", name, "and we'll be on our way.")
     time.sleep(1)
-    print ''' ten years now, it's been ten years
-    since I lost my parents. Killed by bandits the townsfold said,
-    but I know it isn't true. I saw them with my own eyes. Demon like creatures.
-    I've read about them, now I know what they are, daedra. '''
+    print '''You hear your parents say, "we'd die before we let that happen." in union,
+    the reply was nothing except both of their dying breaths, let out in a shriek...'''
+    time.sleep(3)
+    print "CREATE YOUR CHARACTER"
+    time.sleep(1)
+    def race():
+        race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want info on each race, type 'info') FYI, the canon race is imperial")
+        if race == "Orc":
+            print "Orcs have brute strength, they are the most physically rigorous. +50 HEALTH!, + 25 strength -2 agility, -7 intelligence"
+            health + 25
+            strength + 15
+            intelligence - 7
+            agility - 2
+        elif race == "Redguard":
+            print "Redguards are physically fit and agile, making them most useful as swordsmen +20 health +10 strength, +10 agility"
+            health + 20
+            strength + 10
+            agility + 10
+        elif race == "Imperial":
+            print "Imperials conquered the tamrielic empire. They are very diplomatic as well +5 to all stats!"
+            health + 5
+            intelligence + 5
+            strength + 5
+            agility + 5
+        elif race == "Khajiit":
+            print "sorry, not quite done yet"
+            race()
+        elif race == "Breton":
+            print "sorry, not quite done yet"
+            race()
+        elif race == "HighElf":
+            print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. +30 Intelligence, + 2 agility -5 health"
+            health - 5
+            intelligence = 30
+            agility + 5
+        elif race == "Nord":
+            print "sorry, not quite done yet"
+            race()
+        elif race == "DarkElf":
+            print "sorry, not quite done yet"
+        elif race == "WoodElf":
+            print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
+            health + 5
+            intelligence + 5
+            agility + 20
+            strength + 5
+        elif race == "Argonian":
+            print "sorry, not quite done yet"
+            race()
+        elif race == "info":
+            print "Argonians are waterbreathers, Nords are very strong and cold resistant, Imperials are well rounded as any class, Redguards are well rounded in combat as anything but a mage. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, they have a weakness to moonsugar and skooma. Bretons are half-elves"
+            race()
+        else:
+            print "please remember to use capital letters"
+            race()
+    race()
+    time.sleep (1)
+def play2():    
+    print '''ten years now, it's been ten years
+since I lost my parents. Killed by bandits the townsfold said,
+but I know it isn't true. I saw them with my own eyes. I've learned much since then...
+I've read about them, now I know what they are, daedra, lead by a black robed figure, he seemed to be more human than the daedra.
+"Who was the robed figure?" "Why would they come for me?", I thought "What could they possibly want?"
+These answers never left my mind, they haunted my sleep, and I constantly pursued them. 
+After that harrowing night, my great-uncle, Capitus took care of me.
+A grey man, that I'd never met before. He had kind eyes, with a tiredness to them."
+"It's dangerous to go alone take this"
+ '''
+    print "You wake up from another nightmare about that night. They've been getting worse lately. It's your 18th birthday."
+    stand = raw_input("press o to stand up")
+    if stand == "o":
+        print "Bronze achievment unlocked! 'YOU HAVE LEGS'"
+        time.sleep(1.5)
+        print "you stand up and stretch your legs, you go into your chest and pick out your outfit"
+    else:
+        print "you fail to move your legs, YOU'RE PARALYZED"
+        time.sleep(1)
+        print "you died from paralysis"
+        dead()
+    fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
+    if fight_class == "Warrior":
+        print "A basic warrior +20 strength"
+        strength + 20
+    elif fight_class == "info":
+        print "sorry we only have warrior at the moment. Mage and Thief coming soon"
+    else:
+        print "sorry that class isn't out yet"
+    print "Yes, your uncle taught you how to be a", fight_class, "but if you want to exact revenge, you'll need to be stronger."
+    time.sleep(2)
+    print "speaking of your uncle, you should go see him."
+    first_quest = raw_input("talk to your great uncle?")
+    if first_quest == "yes":
+        print "you apporoach Capitus"
+    elif first_quest == "no":
+        print "You decide to go out on your adventure without speaking to your uncle"
+        time.sleep(1)
+        print "You have no idea where you're going and you get lost."
+        time.sleep(1)
+        print "bandits pick you off within hours and loot your corpse"
+        time.sleep(1)
+        dead()
 while True:
     start = raw_input("press X to start  ")
     if start == "x":
@@ -108,3 +215,23 @@ while True:
     else:
         print "press X to start"
     start = raw_input("press X to start  ")
+while True:
+    part2 = raw_input("Are you ready to begin your journey?")
+    if part2 == 'yes':
+        play2()
+    else:
+        print "I won't take no for an answer"
+        play2()
+        health - 10
+print "And then I saw him, Mankar Camoran, leader of the Mythic Dawn." ""
+def dead():
+    print "you got rekt"
+    time.sleep(1)
+    try_again = raw_input("wanna have another go at it?")
+    if try_again == "yes":
+        play2()
+    else:
+        print "why can't you type a simple 'yes'? you aren't worthy of my game"
+        time.sleep(1)
+        while True:
+            break
