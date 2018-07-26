@@ -18,7 +18,7 @@ be seeing my game while it's still very early and far from complete'''
 print "So thank you for helping me out by testing it and giving me your input"
 time.sleep(4)
 print "P.S. To those of you seeing this at camp, I'm looking forward to your feedback, it's been great learning with you all!"
-print "This is one of my most ambitious projects and I'd love for it to become a legit game"
+print "This my most ambitious projects as of yet and I'd love for it to become a legit game"
 print "Follow my instagram if you want updates @simply_reese03"
 time.sleep(8)
 def skyrim():
@@ -80,10 +80,12 @@ def skyrim():
     print "loading complete, launching game"
     time.sleep(1)
     print '''Hiding inside a fireplace was never on your to do list,
-but your parents helped you in, and pushed a button and a stone slab slid under your feet.
-You hear your mother whisper an enchantment and runes appear on the stone.
-You beg them to come too, dispite them having explained that they have to protect you.
-We'd seen trouble from our windows, I only had a glance, and what I saw seemed like a nightmare
+but your parents helped you in, and pushed a button and a stone slab slid under your feet.'''
+    time.sleep(1)
+    print '''You hear your mother whisper an enchantment and runes appear on the stone.
+You beg them to come too, dispite them having explained that they have to protect you'''
+    time.sleep(1)
+    print '''We'd seen trouble from our windows, I only had a glance, and what I saw seemed like a nightmare
 your parents assure you hadn't seen anything, but each passing second after only made the image more clear
 a demonic horde, at least 2 dozen.
 you heard them come in asking for you by name:'''
@@ -103,107 +105,155 @@ you heard them come in asking for you by name:'''
     else:
         print ("You know why we're. Bring us", name, "and we'll be on our way.")
     time.sleep(1)
-    print '''You hear your parents say, "we'd die before we let that happen." in union,
-    the reply was nothing except both of their dying breaths, let out in a shriek...'''
+    print '''You hear your parents say together, "we'd die before we let that happen."
+the reply was nothing except both of their dying breaths, let out in a shriek...
+the trauma causes you to pass out'''
     time.sleep(3)
-    print "CREATE YOUR CHARACTER"
-    time.sleep(1)
-    def race():
+    def createrace():
+        health = 100
+        strength = 10
+        intelligence = 10
+        agility = 10
+        print "CREATE YOUR CHARACTER"
+        time.sleep(1)
         race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want info on each race, type 'info') FYI, the canon race is imperial")
         if race == "Orc":
             print "Orcs have brute strength, they are the most physically rigorous. +50 HEALTH!, + 25 strength -2 agility, -7 intelligence"
-            health + 25
-            strength + 15
+            health += 25
+            strength += 15
             intelligence - 7
             agility - 2
         elif race == "Redguard":
             print "Redguards are physically fit and agile, making them most useful as swordsmen +20 health +10 strength, +10 agility"
-            health + 20
-            strength + 10
-            agility + 10
+            health += 20
+            strength += 10
+            agility += 10
         elif race == "Imperial":
             print "Imperials conquered the tamrielic empire. They are very diplomatic as well +5 to all stats!"
-            health + 5
-            intelligence + 5
-            strength + 5
-            agility + 5
+            health += 5
+            intelligence += 5
+            strength += 5
+            agility += 5
         elif race == "Khajiit":
             print "sorry, not quite done yet"
-            race()
+            createrace()
         elif race == "Breton":
             print "sorry, not quite done yet"
-            race()
+            createrace()
         elif race == "HighElf":
             print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. +30 Intelligence, + 2 agility -5 health"
-            health - 5
-            intelligence = 30
-            agility + 5
+            health -= 5
+            intelligence += 30
+            agility += 5
         elif race == "Nord":
             print "sorry, not quite done yet"
-            race()
+            createrace()
         elif race == "DarkElf":
             print "sorry, not quite done yet"
+            createrace()
         elif race == "WoodElf":
             print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
-            health + 5
-            intelligence + 5
-            agility + 20
-            strength + 5
+            health += 5
+            intelligence += 5
+            agility += 20
+            strength += 5
         elif race == "Argonian":
             print "sorry, not quite done yet"
-            race()
+            createrace()
         elif race == "info":
             print "Argonians are waterbreathers, Nords are very strong and cold resistant, Imperials are well rounded as any class, Redguards are well rounded in combat as anything but a mage. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, they have a weakness to moonsugar and skooma. Bretons are half-elves"
-            race()
+            createrace()
         else:
             print "please remember to use capital letters"
-            race()
-    race()
-    time.sleep (1)
-def play2():    
-    print '''ten years now, it's been ten years
+            createrace()
+    while True:
+        createrace()
+        def part2():  
+            time.sleep(1)
+            print '''ten years now, it's been ten years
 since I lost my parents. Killed by bandits the townsfold said,
-but I know it isn't true. I saw them with my own eyes. I've learned much since then...
-I've read about them, now I know what they are, daedra, lead by a black robed figure, he seemed to be more human than the daedra.
-"Who was the robed figure?" "Why would they come for me?", I thought "What could they possibly want?"
+but I know it isn't true. I saw them with my own eyes. I've learned much since then...'''
+            print '''I've read about them, now I know what they are, daedra, lead by a black robed figure, he seemed to be more human than the daedra.'''
+            time.sleep(2)
+            print '''"Who was the robed figure?" "Why would they come for me?", I thought "What could they possibly want?"
 These answers never left my mind, they haunted my sleep, and I constantly pursued them. 
 After that harrowing night, my great-uncle, Capitus took care of me.
-A grey man, that I'd never met before. He had kind eyes, with a tiredness to them."
-"It's dangerous to go alone take this"
- '''
-    print "You wake up from another nightmare about that night. They've been getting worse lately. It's your 18th birthday."
-    stand = raw_input("press o to stand up")
-    if stand == "o":
-        print "Bronze achievment unlocked! 'YOU HAVE LEGS'"
-        time.sleep(1.5)
-        print "you stand up and stretch your legs, you go into your chest and pick out your outfit"
-    else:
-        print "you fail to move your legs, YOU'RE PARALYZED"
-        time.sleep(1)
-        print "you died from paralysis"
-        dead()
-    fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
-    if fight_class == "Warrior":
-        print "A basic warrior +20 strength"
-        strength + 20
-    elif fight_class == "info":
-        print "sorry we only have warrior at the moment. Mage and Thief coming soon"
-    else:
-        print "sorry that class isn't out yet"
-    print "Yes, your uncle taught you how to be a", fight_class, "but if you want to exact revenge, you'll need to be stronger."
-    time.sleep(2)
-    print "speaking of your uncle, you should go see him."
-    first_quest = raw_input("talk to your great uncle?")
-    if first_quest == "yes":
-        print "you apporoach Capitus"
-    elif first_quest == "no":
-        print "You decide to go out on your adventure without speaking to your uncle"
-        time.sleep(1)
-        print "You have no idea where you're going and you get lost."
-        time.sleep(1)
-        print "bandits pick you off within hours and loot your corpse"
-        time.sleep(1)
-        dead()
+A grey man, that I'd never met before. He had kind eyes, with a tiredness to them.'''
+            time.sleep(4)
+            print "You wake up from another nightmare about that night. They've been getting worse lately. It's your 18th birthday."
+            stand = raw_input("press o to stand up")
+            if stand == "o":
+                print "Bronze achievment unlocked! 'YOU HAVE LEGS'"
+                time.sleep(1.5)
+                print "you stand up and stretch your legs, you go into your chest and pick out your outfit"
+            else:
+                print "you fail to move your legs, YOU'RE PARALYZED"
+                time.sleep(1)
+                print "you died from paralysis"
+                print "you got rekt"
+                time.sleep(1)
+                try_again = raw_input("wanna have another go at it?")
+                if try_again == "yes":
+                    part2()
+                else:
+                    print "why can't you type a simple 'yes'? you aren't worthy of my game"
+                    time.sleep(9999999999)
+            fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
+            if fight_class == "Warrior":
+                print "A basic warrior +20 strength"
+                strength += 20
+            elif fight_class == "info":
+                print "sorry we only have warrior at the moment. Mage and Thief coming soon"
+                fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
+                time.sleep(1)
+                if fight_class == "Warrior":
+                    print "A basic warrior +20 strength"
+                    strength += 20 
+                elif fight_class == "thief":
+                    print "Basic thief: +20 Agility"
+                    agility += 20
+                else:
+                    time.sleep(9999)
+            else:
+                print "sorry that class isn't out yet"
+                fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
+                time.sleep(1)
+                if fight_class == "warrior":
+                    print "A basic warrior +20 strength"
+                    strength += 20 
+                else:
+                    time.sleep(9999)
+            print "Yes, your uncle taught you how to be a", fight_class, "but if you want to exact revenge, you'll need to be stronger."
+            time.sleep(2)
+            print "speaking of your uncle, you should go see him."
+            first_quest = raw_input("talk to your great uncle?")
+            if first_quest == "yes":
+                print "you apporoach Capitus"
+            elif first_quest == "no":
+                print "You decide to go out on your adventure without speaking to your uncle"
+                time.sleep(1)
+                print "You have no idea where you're going and you get lost."
+                time.sleep(1)
+                print "bandits pick you off within hours and loot your corpse"
+                time.sleep(1)
+                print "you got rekt"
+                time.sleep(1)
+                try_again = raw_input("wanna have another go at it?")
+                if try_again == "yes":
+                    part2()
+                else:
+                    print "why can't you type a simple 'yes'? you aren't worthy of my game"
+                    time.sleep(9999999)
+            else:
+                print("I said type 'yes' or 'no', follow directions next time")
+                part2()
+        play2 = raw_input("Are you ready to begin your journey?")
+        if play2 == 'yes':
+            part2()
+        else:
+            print "I won't take no for an answer"
+            part2()
+            health -= 10
 while True:
     start = raw_input("press X to start  ")
     if start == "x":
@@ -215,23 +265,3 @@ while True:
     else:
         print "press X to start"
     start = raw_input("press X to start  ")
-while True:
-    part2 = raw_input("Are you ready to begin your journey?")
-    if part2 == 'yes':
-        play2()
-    else:
-        print "I won't take no for an answer"
-        play2()
-        health - 10
-print "And then I saw him, Mankar Camoran, leader of the Mythic Dawn." ""
-def dead():
-    print "you got rekt"
-    time.sleep(1)
-    try_again = raw_input("wanna have another go at it?")
-    if try_again == "yes":
-        play2()
-    else:
-        print "why can't you type a simple 'yes'? you aren't worthy of my game"
-        time.sleep(1)
-        while True:
-            break
