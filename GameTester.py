@@ -93,7 +93,7 @@ you heard them come in asking for you by name:'''
     if name == "Reese":
         print ("Return of the King")
     elif name == "tester":
-        print ("Thanks for testing my game! (The usual line is Bring us ____, and we'll be on our way, the blank being a name that isn't secret, I have easter eggs hidden, this name is one of them to the world of Skyrim")    
+        print ("Thanks for testing my game! (The usual line is Bring us ____, and we'll be on our way, the blank being a name that isn't secret, I have easter eggs hidden, this name is one of them.")
     elif name == "dovahkiin":
         print "FUS RO DAH"
     elif name == "silence my brother":
@@ -102,8 +102,11 @@ you heard them come in asking for you by name:'''
         print "Welcome home"
     elif name == "innocence my brother":
         print "Welcome home"
+    elif name == "Vahdeta":
+        print "She didn't know what to say"
     else:
-        print ("You know why we're. Bring us", name, "and we'll be on our way.")
+        print ""
+    print ("You know why we're. Bring us", name, "and we'll be on our way.")
     time.sleep(1)
     print '''You hear your parents say together, "we'd die before we let that happen."
 the reply was nothing except both of their dying breaths, let out in a shriek...
@@ -209,7 +212,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 if fight_class == "Warrior":
                     print "A basic warrior +20 strength"
                     strength += 20 
-                elif fight_class == "thief":
+                elif fight_class == "Thief":
                     print "Basic thief: +20 Agility"
                     agility += 20
                 else:
