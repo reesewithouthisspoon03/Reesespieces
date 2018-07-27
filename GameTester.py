@@ -159,18 +159,20 @@ the trauma causes you to pass out'''
             print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence"
             intelligence += 30
         elif race == "HighElf":
-            print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. +30 Intelligence, + 2 agility -5 health"
+            print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. Arrogent pricks who think they're better than other races as well. +30 Intelligence, + 2 agility -5 health"
             health -= 5
             intelligence += 30
             agility += 5
         elif race == "Nord":
-            print "Nord are tall,pale humans that have incredible resistance and strength. +10 agility +5 health +20 strength"
+            print "Nord are tall,pale humans that have incredible resistance and strength. Racist against all other races +10 agility +5 health +20 strength"
             health += 5
             agility += 10
             strength += 20
         elif race == "DarkElf":
-            print "Dark Elves are dark-skinned elves that are often targeted because of their status. -5 health"
+            print "Dark Elves are dark-skinned elves that are often targeted because of their status. Good assasins and wizards -5 health"
             health -= 5
+            intelligence += 30
+            agility += 10
         elif race == "WoodElf":
             print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
             health += 5
@@ -247,27 +249,28 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 intelligence += 8
                 agility += 10
             elif fight_class == "Mage":
-                print "Mages have magical ability. +15 Intelligence"
+                print "Mages have natural magical ability. +15 Intelligence"
                 intelligence += 15
             elif fight_class == "Knight":
-                print "Knights are strong in body and character. +10 agility, +5 strength, +75 health"
+                print "Knights are strong in body and character. +5 agility, +10 strength, +75 health"
                 agility += 10
                 strength += 5
                 health += 75
             elif fight_class == "Spellsword":
-                print "Spellswords use both magic and combat. +25 agility, +25 strength"
-                agility += 25
+                print "Spellswords use both magic and combat. +25 intelligence, +25 strength"
+                intelligence += 25
                 strength += 25
             elif fight_class == "Archer":
-                print "Archers use bow and arrows in battle. +10 strength"
+                print "Archers use bow and arrows in battle. +10 strength, +15 agility"
                 strength += 10
+                agility += 15
             elif fight_class == "2S2C":
                 print "Simply cannot control them. -25 intelligence, +75 strength, +25 health"
                 intelligence -= 25
                 strength += 75
                 health += 25
             elif fight_class == "Adventurer":
-                print "Adventurers explore territory. +10 to all categories"
+                print "Adventurers explore territory and as is custom in RPGs, they take on quests. +10 to all stats"
                 intelligence += 10
                 strength += 10
                 health += 10
@@ -275,7 +278,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 fun += 10
             elif fight_class == "Atronach":
                 print "Otherwise known as golems. +5 fun, +10 intelligence"
-                intelligence += 10
+                intelligence += 15
                 fun += 5
             elif fight_class == "Conjurer":
                 print "Conjurers are robed Mages who summon others to fight against them. +5 agility, +5 health, +15 intelligence"
@@ -332,7 +335,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "I see, perhaps you will. I'm not a prophet you know, however great wisdom I have may be. In time you shall discover your destiny whatever it may be. +5 to a hidden stat"
                 fun += 5
             print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
-            first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, An enchanted staff.) your weapon's usefulness depends on your stats")
+            first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, An enchanted staff{just type 'staff'.) your weapon's usefulness depends on your stats")
             if first_weapon == "Sword + Shield":
                 print "Achievement unlocked! Basic Warrior"
                 time.sleep(1.7)
@@ -341,6 +344,18 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "Achievement unlocked! 'Pointy Aren't They?'"
                 time.sleep(1.7)
                 print "Obtained Bow and Quiver!"
+            elif first_weapon == "Warhammer":
+                print "Achievement unlocked! 'A blunt instrument'"
+                time.sleep(1.7)
+                print "Obtained Warhammer!"
+            elif first_weapon == "Daggers":
+                print "Achievement unlocked! 'stab time!!!'"
+                time.sleep(1.7)
+                print "Obtained daggers!"
+            elif first_weapon == "staff":
+                print "Achievement unlocked! 'Magic stuff'"
+                time.sleep(1.7)
+                print "Obtained Enchanted Staff"
             else:
                 print "You chose 'nothing'!"
                 time.sleep(1.2)
@@ -356,16 +371,12 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             time.sleep(1.9)
             print "The tutorial is complete, welcome to The Elder Scrolls 0: Adventurer"
             see_stats = raw_input("Would you like to see your stats?")
-            if raw_input == ("yes"):
+            if see_stats == ("yes"):
                 print "strength is" + str(strength)
                 print "intelligence is" + str(intelligence)
                 print "agility is" + str(agility)
-            if raw_input == ("super"):
+            if see_stats == ("super"):
                 print "fun is" +str(fun)
-            else:
-                part2()
-            random_event1 = random.randrange(6,10)
-            random_event2 = random.randrange(8,13)
             print "A thief sneaks up behind you with a knife to your throat and demands your money"
             random_event1reaction = raw_input("How do you deal with the thief? Give in? Fight back? Persuade?")
             if random_event1reaction =="Fight back":
