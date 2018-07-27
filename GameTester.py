@@ -6,10 +6,16 @@ loading_screen = random.randrange(0,5)
 loading_screen2 = random.randrange(0,5)
 loading_screen3 = random.randrange(0,5)
 #variables
-health = 100
-strength = 10
-intelligence = 10
-agility = 10
+global health 
+health= 100
+global strength 
+strength= 10
+global intelligence 
+intelligence= 10
+global agility 
+agility= 10
+global fun 
+fun= 10
 print ("A message from the Developer:")
 time.sleep(3)
 print '''Hi, thanks for playing my game, most likely you'll
@@ -96,6 +102,10 @@ you heard them come in asking for you by name:'''
         print ("Thanks for testing my game! (The usual line is Bring us ____, and we'll be on our way, the blank being a name that isn't secret, I have easter eggs hidden, this name is one of them.")
     elif name == "dovahkiin":
         print "FUS RO DAH"
+    elif name == "Kimberly":
+        print "Snack Time!!!"
+    elif name == "Jordan":
+        print "I sleep on the floor, like a puppy-dog"
     elif name == "silence my brother":
         print "Welcome home"
     elif name == "sanguine my brother":
@@ -105,7 +115,8 @@ you heard them come in asking for you by name:'''
     elif name == "Vahdeta":
         print "She didn't know what to say"
     else:
-        print ""
+        fun = 10
+        fun += 1
     print ("You know why we're. Bring us", name, "and we'll be on our way.")
     time.sleep(1)
     print '''You hear your parents say together, "we'd die before we let that happen."
@@ -113,10 +124,11 @@ the reply was nothing except both of their dying breaths, let out in a shriek...
 the trauma causes you to pass out'''
     time.sleep(3)
     def createrace():
-        health = 100
-        strength = 10
-        intelligence = 10
-        agility = 10
+        global health
+        global strength
+        global intelligence
+        global agility
+        global fun
         print "CREATE YOUR CHARACTER"
         time.sleep(1)
         race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want info on each race, type 'info') FYI, the canon race is imperial")
@@ -124,8 +136,8 @@ the trauma causes you to pass out'''
             print "Orcs have brute strength, they are the most physically rigorous. +50 HEALTH!, + 25 strength -2 agility, -7 intelligence"
             health += 25
             strength += 15
-            intelligence - 7
-            agility - 2
+            intelligence -= 7
+            agility -= 2
         elif race == "Redguard":
             print "Redguards are physically fit and agile, making them most useful as swordsmen +20 health +10 strength, +10 agility"
             health += 20
@@ -138,22 +150,27 @@ the trauma causes you to pass out'''
             strength += 5
             agility += 5
         elif race == "Khajiit":
-            print "sorry, not quite done yet"
-            createrace()
+            print "Khajiits are witty and agile. They make great warriors, thieves and assassins. +15 agility, +7 health, +7 intelligence, +10 strength"
+            health +=7
+            agility += 15
+            intelligence += 7
+            strength += 10
         elif race == "Breton":
-            print "sorry, not quite done yet"
-            createrace()
+            print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence"
+            intelligence += 30
         elif race == "HighElf":
             print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. +30 Intelligence, + 2 agility -5 health"
             health -= 5
             intelligence += 30
             agility += 5
         elif race == "Nord":
-            print "sorry, not quite done yet"
-            createrace()
+            print "Nord are tall,pale humans that have incredible resistance and strength. +10 agility +5 health +20 strength"
+            health += 5
+            agility += 10
+            strength += 20
         elif race == "DarkElf":
-            print "sorry, not quite done yet"
-            createrace()
+            print "Dark Elves are dark-skinned elves that are often targeted because of their status. -5 health"
+            health -= 5
         elif race == "WoodElf":
             print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
             health += 5
@@ -161,8 +178,9 @@ the trauma causes you to pass out'''
             agility += 20
             strength += 5
         elif race == "Argonian":
-            print "sorry, not quite done yet"
-            createrace()
+            print "Argonians are reptilian people that can breathe underwater and a resistant to many human diseases. +10 health +7 strength"
+            health += 10
+            strength += 7
         elif race == "info":
             print "Argonians are waterbreathers, Nords are very strong and cold resistant, Imperials are well rounded as any class, Redguards are well rounded in combat as anything but a mage. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, they have a weakness to moonsugar and skooma. Bretons are half-elves"
             createrace()
@@ -171,7 +189,12 @@ the trauma causes you to pass out'''
             createrace()
     while True:
         createrace()
-        def part2():  
+        def part2():
+            global strength
+            global health
+            global intelligence
+            global agility
+            global fun
             time.sleep(1)
             print '''ten years now, it's been ten years
 since I lost my parents. Killed by bandits the townsfold said,
@@ -206,8 +229,8 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "A basic warrior +20 strength"
                 strength += 20
             elif fight_class == "info":
-                print "sorry we only have warrior at the moment. Mage and Thief coming soon"
-                fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
+                print "Warrior, Thief, and Assassin are available right now. More coming soon"
+                fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), Atronach, Conjurer. And as with races, type 'info' for information on all classes")
                 time.sleep(1)
                 if fight_class == "Warrior":
                     print "A basic warrior +20 strength"
@@ -215,17 +238,61 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 elif fight_class == "Thief":
                     print "Basic thief: +20 Agility"
                     agility += 20
-                else:
-                    time.sleep(9999)
+            elif fight_class == "Thief":
+                print "Basic thief: +20 Agility"
+                agility += 20
+            elif fight_class == "Assassin":
+                print "A cunning assassin, trained to kill targets +10 agility, +8 intelligence, +2 strength"
+                strength += 2
+                intelligence += 8
+                agility += 10
+            elif fight_class == "Mage":
+                print "Mages have magical ability. +15 Intelligence"
+                intelligence += 15
+            elif fight_class == "Knight":
+                print "Knights are strong in body and character. +10 agility, +5 strength, +75 health"
+                agility += 10
+                strength += 5
+                health += 75
+            elif fight_class == "Spellsword":
+                print "Spellswords use both magic and combat. +25 agility, +25 strength"
+                agility += 25
+                strength += 25
+            elif fight_class == "Archer":
+                print "Archers use bow and arrows in battle. +10 strength"
+                strength += 10
+            elif fight_class == "2S2C":
+                print "Simply cannot control them. -25 intelligence, +75 strength, +25 health"
+                intelligence -= 25
+                strength += 75
+                health += 25
+            elif fight_class == "Adventurer":
+                print "Adventurers explore territory. +10 to all categories"
+                intelligence += 10
+                strength += 10
+                health += 10
+                agility += 10
+                fun += 10
+            elif fight_class == "Atronach":
+                print "Otherwise known as golems. +5 fun, +10 intelligence"
+                intelligence += 10
+                fun += 5
+            elif fight_class == "Conjurer":
+                print "Conjurers are robed Mages who summon others to fight against them. +5 agility, +5 health, +15 intelligence"
+                intelligence += 15
+                agility += 5
+                health += 5
             else:
                 print "sorry that class isn't out yet"
                 fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
                 time.sleep(1)
-                if fight_class == "warrior":
+                if fight_class == "Warrior":
                     print "A basic warrior +20 strength"
                     strength += 20 
+                elif fight_class == "Assassin":
+                    print "Assassins are quick and cunning, +15 agility, +10 intelligence, +3 strength, (this one is buffed, silver achievment unlocked! 'Found an exploit!'"
                 else:
-                    time.sleep(9999)
+                    part2()
             print "Yes, your uncle taught you how to be a", fight_class, "but if you want to exact revenge, you'll need to be stronger."
             time.sleep(2)
             print "speaking of your uncle, you should go see him."
@@ -250,13 +317,95 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             else:
                 print("I said type 'yes' or 'no', follow directions next time")
                 part2()
-        play2 = raw_input("Are you ready to begin your journey?")
-        if play2 == 'yes':
-            part2()
-        else:
-            print "I won't take no for an answer"
-            part2()
-            health -= 10
+            print "He looks to you with weary eyes and says", name, "You are 18 now. Your time has come. Today is the day that you leave and fulfill your destiny"
+            second_quest = raw_input("What do you think your destiny is?(To exact revenge! To find out who the black robed figure is, To forget about my past")
+            if second_quest == "To exact revenge!":
+                print "You're a firey soul, be careful that the flame does not consume you... +5 strength"
+                strength += 5
+            elif second_quest == "To find out who the black robed figure is":
+                print "You are inquisitive... I admire that. Remember that the truth is often obtained through great struggle, and it may not be what you except it to be. intelligence +5"
+                intelligence += 5
+            elif second_quest == "To forget about my past":
+                print "So you wish to go rouge? Fate is strong, but if your will and intent is good and strong, you may overcome it. +5 agility"
+                agility += 5
+            else:
+                print "I see, perhaps you will. I'm not a prophet you know, however great wisdom I have may be. In time you shall discover your destiny whatever it may be. +5 to a hidden stat"
+                fun += 5
+            print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
+            first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, An enchanted staff.) your weapon's usefulness depends on your stats")
+            if first_weapon == "Sword + Shield":
+                print "Achievement unlocked! Basic Warrior"
+                time.sleep(1.7)
+                print "Obtained Sword + Shield!"
+            elif first_weapon == "Bow and Quiver":
+                print "Achievement unlocked! 'Pointy Aren't They?'"
+                time.sleep(1.7)
+                print "Obtained Bow and Quiver!"
+            else:
+                print "You chose 'nothing'!"
+                time.sleep(1.2)
+                print "you go out into the world without a weapon"
+                time.sleep(1.2)
+                print "bandits assault you head on, with nothing to defend yourself, you are murdered in 30 seconds flat"
+                time.sleep(1.2)
+                print "GIT GUD!!!"
+                time.sleep(0.5)
+                print "try again"
+                part2()
+            print "Now go and discover your destiny"
+            time.sleep(1.9)
+            print "The tutorial is complete, welcome to The Elder Scrolls 0: Adventurer"
+            see_stats = raw_input("Would you like to see your stats?")
+            if raw_input == ("yes"):
+                print "strength is" + str(strength)
+                print "intelligence is" + str(intelligence)
+                print "agility is" + str(agility)
+            if raw_input == ("super"):
+                print "fun is" +str(fun)
+            else:
+                part2()
+            random_event1 = random.randrange(6,10)
+            random_event2 = random.randrange(8,13)
+            print "A thief sneaks up behind you with a knife to your throat and demands your money"
+            random_event1reaction = raw_input("How do you deal with the thief? Give in? Fight back? Persuade?")
+            if random_event1reaction =="Fight back":
+                if fight_class == "Assassin":
+                    print "little does this thief know that you're a trained assassin, you murder him to death and take his money + 80 gold"
+                elif strength > 34:
+                    print "You easily fight off the bandit! He runs off with grave wounds"
+                elif strength > 24:
+                    print "After a long fight you defeat the bandit, both of you are very hurt -100 health"
+                    health -= 100
+                    if health < 1:
+                        print "you bled out from your injuries"
+                        part2()
+                else:
+                    print "You wet yourself and the bandit instantly slits your throat out of disgust"
+                    time.sleep(1.5)
+                    print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things differ"
+                    part2()
+            elif random_event1reation == "Give in":
+                print "you were given some money by Capitus, the thief demands it all, you oblige"
+                if agility > 30:
+                    print "but being an aspiring thief yourself, you pickpocket your money back almost immediately after the thief turns around"
+                elif agility > 18:
+                    print "after handing him only a few gold, you break free and sprint away. Good on you coward, but at least you didn't die. - 5 gold"
+                else:    
+                    print "the thief says, 'Did you really think I'd only ask for your money?' No, I want your life. He proceeds to slit your throat"
+                    time.sleep(1)
+                    print "You died? This was so easy though!!! oh well, go back and maybe you'll learn something useful"
+                    part2()
+            elif random_event1reaction == "pursuade":
+                if intelligence > 29:
+                    print "You tell the thief about your fake cache of goods, since he's stupid he believes you"
+                    if strength > 19:
+                        print "you take the opportunity to ambush the thief"
+                        time.sleep(1.3)
+                        print "you sucessfully defeat the thief! Nice job!"
+                    else:
+                        print "You escape while the thief is searching for your made up cache"
+            print "This concludes the Beta version of The Elder Scrolls 0: Adventurer"
+            time.sleep(100)
 while True:
     start = raw_input("press X to start  ")
     if start == "x":
