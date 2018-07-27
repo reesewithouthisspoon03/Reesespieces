@@ -384,7 +384,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                     time.sleep(1.5)
                     print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things differ"
                     part2()
-            elif random_event1reation == "Give in":
+            elif random_event1reaction == "Give in":
                 print "you were given some money by Capitus, the thief demands it all, you oblige"
                 if agility > 30:
                     print "but being an aspiring thief yourself, you pickpocket your money back almost immediately after the thief turns around"
@@ -406,6 +406,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                         print "You escape while the thief is searching for your made up cache"
             print "This concludes the Beta version of The Elder Scrolls 0: Adventurer"
             time.sleep(100)
+        part2()
 while True:
     start = raw_input("press X to start  ")
     if start == "x":
