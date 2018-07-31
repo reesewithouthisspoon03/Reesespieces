@@ -42,4 +42,4 @@ while True:
     else:
         print "press X to start"
     start = raw_input("press X to start")
-
+    

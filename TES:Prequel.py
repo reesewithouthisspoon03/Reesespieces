@@ -7,25 +7,23 @@ loading_screen2 = random.randrange(0,5)
 loading_screen3 = random.randrange(0,5)
 #variables
 global health 
-health= 100
+health = 100
 global strength 
-strength= 10
+strength = 10
 global intelligence 
-intelligence= 10
+intelligence = 10
 global agility 
-agility= 10
+agility = 10
 global fun 
-fun= 10
-print ("A message from the Developer:")
-time.sleep(3)
-print '''Hi, thanks for playing my game, most likely you'll
-be seeing my game while it's still very early and far from complete'''
-(time.sleep(3.5))
-print "So thank you for helping me out by testing it and giving me your input"
-time.sleep(4)
-print "P.S. To those of you seeing this at camp, I'm looking forward to your feedback, it's been great learning with you all!"
-print "This my most ambitious projects as of yet and I'd love for it to become a legit game"
-print "Follow my instagram if you want updates @simply_reese03"
+fun = 10
+global gold
+gold = 100
+print ("Rever Monde presents...")
+time.sleep(1)
+print ("An Elder Scrolls parody...")
+time.sleep(1)
+print ("The Elder Scrolls 0: Adventurer")
+time.sleep(1)
 time.sleep(8)
 def skyrim():
     print "Launching skyrim_80.exe"
@@ -144,11 +142,11 @@ the trauma causes you to pass out'''
             strength += 10
             agility += 10
         elif race == "Imperial":
-            print "Imperials conquered the tamrielic empire. They are very diplomatic as well +5 to all stats!"
-            health += 5
-            intelligence += 5
-            strength += 5
-            agility += 5
+            print "Imperials conquered the tamrielic empire. They are very diplomatic as well +7.5 to all stats!"
+            health += 7.5
+            intelligence += 7.5
+            strength += 7.5
+            agility += 7.5
         elif race == "Khajiit":
             print "Khajiits are witty and agile. They make great warriors, thieves and assassins. +15 agility, +7 health, +7 intelligence, +10 strength"
             health +=7
@@ -156,20 +154,21 @@ the trauma causes you to pass out'''
             intelligence += 7
             strength += 10
         elif race == "Breton":
-            print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence"
+            print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence, +5 strenth"
             intelligence += 30
+            strength += 5
         elif race == "HighElf":
-            print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. Arrogent pricks who think they're better than other races as well. +30 Intelligence, + 2 agility -5 health"
+            print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. Arrogent pricks who think they're better than other races as well. +30 Intelligence, + 2 agility -5 health - 5 strength"
             health -= 5
             intelligence += 30
             agility += 5
         elif race == "Nord":
-            print "Nord are tall,pale humans that have incredible resistance and strength. Racist against all other races +10 agility +5 health +20 strength"
+            print "Nord are tall,pale humans that have incredible resistance and strength. Racist against all other races +6 agility +5 health +20 strength"
             health += 5
-            agility += 10
+            agility += 6
             strength += 20
         elif race == "DarkElf":
-            print "Dark Elves are dark-skinned elves that are often targeted because of their status. Good assasins and wizards -5 health +30 intelligence, +10 agility"
+            print "Dark Elves are dark-skinned elves that are often targeted because of their status. They are historically good assasins in the Morag Tong and wizards like House Telvanni -5 health +30 intelligence, +10 agility"
             health -= 5
             intelligence += 30
             agility += 10
@@ -182,12 +181,13 @@ the trauma causes you to pass out'''
         elif race == "Argonian":
             print "Argonians are reptilian people that can breathe underwater and a resistant to many human diseases. +10 health +7 strength"
             health += 10
-            strength += 7
+            strength += 10.5
+            agility += 7
         elif race == "info":
-            print "Argonians are waterbreathers, Nords are very strong and cold resistant, Imperials are well rounded as any class, Redguards are well rounded in combat as anything but a mage. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, they have a weakness to moonsugar and skooma. Bretons are half-elves"
+            print "Argonians are waterbreathing reptillian people, they have a longstanding and mutual hatred against Dark Elves, Nords are very strong and cold resistant and are often critisized as barbaric, Imperials are well rounded as any class they have been reguarded as great scholars, warriors, and thieves of past, however their biggest trump card is diplomacy. Redguards are well rounded in combat as anything but a mage they hail from Hammerfell, which is dominated by the Alik'r Desert, as such they are resistant to heat and poison of some creatures. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, however many outside of their homeland of Elsweyr are members of caravans, they have a weakness to moonsugar and skooma two very addictive drugs in tamriel. Bretons are half-elves who make naturally good magic users. High Elves AKA Altmer are the most magically gifted of the races of tamriel. Woodelves, AKA Bosmer hail from Valenwood, a forest sanctuary untouched by most men and other mer races."
             createrace()
         else:
-            print "please remember to use capital letters"
+            print "please remember to spell it out correctly"
             createrace()
     while True:
         createrace()
@@ -427,9 +427,27 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             else:
                 print "Your complicated action is too much for the thief to handle, his head implodes, leaving a mound where his head once was. +10 to a hidden stat."
                 fun += 10
-            print "This concludes the Beta version of The Elder Scrolls 0: Adventurer"
-            time.sleep(100)
-        part2()
+            time.sleep(1)
+            print "Good job at completing your first random encounter, this one wasn't so random though, so you could go back and take differrent routes to learn more about how random events work."
+            tutorial == raw_input ("Would you like to go back? Warning, this will reset all the way back to before you created your race!")
+            if tutorial == ("yes"):
+                createrace()
+            elif tutorial == ("Yes"):
+                createrace()
+            time.sleep(1)
+        while True:
+            part2()
+            def part3():
+                print ("Having survived your encounter with the thief, you decide to save your progress here, because who wants to go back to the start?")
+                time.sleep(1)
+                print ("Being an adventurer, you decide you want to do some adventuring.")
+                time.sleep(1)
+                inventory1 == raw_input ("Before you continue would you like to check your inventory?")
+                if inventory1 == "yes":
+                    print first_weapon",", fight_class, " basic armor,", str(gold)", Uncle Caruis's Letter
+                    time.sleep(1)
+                print ("The note says: I know more about your parents' death than I've let on")
+                
 while True:
     start = raw_input("press X to start  ")
     if start == "x":
