@@ -132,9 +132,9 @@ you heard them come in asking for you by name:'''
     else:
         fun = 10
         fun += 1
-    print ("You know why we're. Bring us", name, "and we'll be on our way.")
+    print '''"You know why we're here. Bring us''', name, '''and we'll be on our way."'''
     time.sleep(1)
-    print '''You hear your parents say together, "we'd die before we let that happen."
+    print '''You hear your parents say together, "We'd die before we let that happen."
 the reply was nothing except both of their dying breaths, let out in a shriek...
 the trauma causes you to pass out'''
     time.sleep(3)
@@ -258,8 +258,8 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             global fun
             global gold
             global fight_class
-            fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
-            if fight_class == "Info":
+            fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes ")
+            if fight_class == "info":
                 print "Warrior basic physical fighter. Thief, basic stealth fighter. Mage, basic magic/mental fighter. Knight, a highly defensive charachter, however not lacking in offense. Spellsword, a Warrior/Mage hybrid. Archer, an agility focused character"
                 time.sleep(1)
                 class_select()
@@ -349,7 +349,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print("I said type 'yes' or 'no', follow directions next time")
                 part2()
             print "He looks to you with weary eyes and says", name, "You are 18 now. Your time has come. Today is the day that you leave and fulfill your destiny"
-            second_quest = raw_input("What do you think your destiny is?(To exact revenge! To find out who the black robed figure is, To forget about my past")
+            second_quest = raw_input("What do you think your destiny is?(To exact revenge! To find out who the black robed figure is, To forget about my past ")
             if second_quest == "To exact revenge!":
                 print "You're a firey soul, be careful that the flame does not consume you... +5 strength"
                 strength += 5
@@ -360,7 +360,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "So you wish to go rouge? Fate is strong, but if your will and intent is good and strong, you may overcome it. +5 agility"
                 agility += 5
             else:
-                print "I see, perhaps you will. I'm not a prophet you know, however great wisdom I have may be. In time you shall discover your destiny whatever it may be. +5 to a hidden stat"
+                print "Perhaps you will. I'm not a prophet you know, though I have great wisdom. In time you shall discover your destiny whatever it may be. +5 to a hidden stat"
                 fun += 5
             print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
             global first_weapon
@@ -454,19 +454,23 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 else:
                     print "You wet yourself and the bandit instantly slits your throat out of disgust"
                     time.sleep(1.5)
-                    print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things differ"
-                    ()
+                    print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things different!"
+                    time.sleep(4)
+                    createrace()
             elif random_event1reaction == "Give in":
-                print "you were given some money by Capitus, the thief demands it all, you oblige"
+                print "you were given some money by Capitus, the thief demands it all, you oblige -100 gold"
+                gold -= 100
                 time.sleep(1.75)
                 if agility > 30:
-                    print "but being an aspiring thief yourself, you pickpocket your money back almost immediately after the thief turns around"
+                    print "but being an aspiring thief yourself, you pickpocket his money almost immediately after the thief turns around +210 gold"
+                    gold += 210
                 elif agility > 18:
                     print "after handing him only a few gold, you break free and sprint away. Good on you coward, but at least you didn't die. - 5 gold"
                 else:    
                     print "the thief says, 'Did you really think I'd only ask for your money?' No, I want your life. He proceeds to slit your throat"
                     time.sleep(1)
                     print "You died? This was so easy though!!! oh well, go back and maybe you'll learn something useful"
+                    time.sleep(4)
                     part4()
             elif random_event1reaction == "pursuade":
                 if intelligence > 29:
@@ -497,6 +501,10 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 createrace()
             elif tutorial == ("Y"):
                 createrace()
+            elif tutorial == ("No"):
+                time.sleep(1)
+            elif tutorial == ("no"):
+                time.sleep(1)
             else:
                 time.sleep(1)
         part4()
@@ -583,9 +591,9 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             if random_encounter3 == 21:
                 print "Portal to oblivion opens"    
             if random_encounter3 == 22:
-                print ""
+                print "Dragon"
             if random_encounter3 == 23:
-                print "n"    
+                print ""    
             if random_encounter3 == 24:
                 print "o"
             if random_encounter3 == 25:
