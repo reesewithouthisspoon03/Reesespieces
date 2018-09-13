@@ -511,16 +511,36 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "you have", str(gold), "gold"
                 print "Capitus' letter"
                 time.sleep(1)
-            print ("You decide to read the letter:")
-            time.sleep(1.4)
-            if fight_class == "2S2C":
-              print "You cannot read, however your muslces are able to absorb the knowledge of the letter."
-              time.sleep (2)
-              print ("Your muscles determine from the letter than your uncle Capitus knows more about your parents' death.")
-            elif intelligence > 0:
-                print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin")
-            else:
-                print "You're too stupid to read, so you continue walking blindly."
+                print ("You decide to read the letter:")
+                time.sleep(1.4)
+                if fight_class == "2S2C":
+                  print "You cannot read, however your muslces are able to absorb the knowledge of the letter."
+                  time.sleep (2)
+                  print ("Your muscles determine from the letter than your uncle Capitus knows more about your parents' death.")
+                elif intelligence > 0:
+                    print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin")
+                else:
+                    print "You're too stupid to read, so you continue walking blindly."
+                time.sleep(1)
+                print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
+                intelligence += 10
+            if inventory1 == "no":
+                print "Too bad, because it's an RPG, and I said you have to"
+                print first_weapon
+                print fight_class, "'s armor"
+                print "you have", str(gold), "gold"
+                print "Capitus' letter"
+                time.sleep(1)
+                print ("You decide to read the letter:")
+                time.sleep(1.4)
+                if fight_class == "2S2C":
+                  print "You cannot read, however your muslces are able to absorb the knowledge of the letter."
+                  time.sleep (2)
+                  print ("Your muscles determine from the letter than your uncle Capitus knows more about your parents' death.")
+                elif intelligence > 0:
+                    print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin")
+                else:
+                    print "You're too stupid to read, so you continue walking blindly."
                 time.sleep(1)
                 print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
                 intelligence += 10
