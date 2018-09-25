@@ -149,9 +149,101 @@ the trauma causes you to pass out'''
         print "CREATE YOUR CHARACTER"
         time.sleep(1)
         global race
-        race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want info on each race, type 'info') FYI, the canon race is Imperial ")
         if race == "Orc":
-            print "Orcs have brute strength, they are the most physically rigorous. +20 HEALTH!, + 25 strength -2 agility, -7 intelligence"
+            print "Orcs have brute strength, they are the most physically rigorous. +50 HEALTH!, + 25 strength -2 agility, -7 intelligence"
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "Yes":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "Y":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "y":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+        elif race == "Redguard":
+            print "Redguards are physically fit and agile, making them most useful as swordsmen +20 health +10 strength, +10 agility"
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "Yes":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "Y":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "y":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+        elif race == "Imperial":
+            print "Imperials conquered the tamrielic empire. They are very diplomatic as well +7.5 to all stats!"
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "Yes":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "Y":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "y":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()
+        race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want extra info on each race, type 'info') FYI, the canon race is Imperial ")
+        if race == "Orc":
+            print "Orcs have brute strength, they are the most physically rigorous race of tamriel. +20 HEALTH!, + 25 strength -2 agility, -7 intelligence"
             health += 20
             strength += 15
             intelligence -= 7
@@ -162,7 +254,7 @@ the trauma causes you to pass out'''
             strength += 10
             agility += 10
         elif race == "Imperial":
-            print "Imperials conquered the tamrielic empire. They are very diplomatic as well +7.5 to all stats!"
+            print "Imperials conquered the tamrielic empire. They are very diplomatic as well. +7.5 to all stats!"
             health += 7.5
             intelligence += 7.5
             strength += 7.5
@@ -174,7 +266,7 @@ the trauma causes you to pass out'''
             intelligence += 7
             strength += 10
         elif race == "Breton":
-            print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence, +5 strenth"
+            print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +25 intelligence, +5 strenth"
             intelligence += 25
             strength += 5
         elif race == "HighElf":
@@ -204,7 +296,7 @@ the trauma causes you to pass out'''
             strength += 10.5
             agility += 7
         elif race == "info":
-            print "Argonians are waterbreathing reptillian people, they have a longstanding and mutual hatred against Dark Elves, Nords are very strong and cold resistant and are often critisized as barbaric, Imperials are well rounded as any class they have been reguarded as great scholars, warriors, and thieves of past, however their biggest trump card is diplomacy. Redguards are well rounded in combat as anything but a mage they hail from Hammerfell, which is dominated by the Alik'r Desert, as such they are resistant to heat and poison of some creatures. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, however many outside of their homeland of Elsweyr are members of caravans, they have a weakness to moonsugar and skooma two very addictive drugs in tamriel. Bretons are half-elves who make naturally good magic users. High Elves AKA Altmer are the most magically gifted of the races of tamriel. Woodelves, AKA Bosmer hail from Valenwood, a forest sanctuary untouched by most men and other mer races."
+            print "Argonians are waterbreathing reptillian people, they have a longstanding and mutual hatred with Dark Elves, Nords are very strong and cold resistant and are often critisized as barbaric and racist, Imperials are well rounded as any class they have been reguarded as great scholars, warriors, as well as thieves however their biggest trump card is diplomacy. Redguards are well rounded in combat as anything but a mage they hail from Hammerfell, which is dominated by the Alik'r Desert, as such they are resistant to heat and poison of some creatures. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, however many outside of their homeland of Elsweyr are members of caravans, they have a weakness to moonsugar and skooma, the cocaine of Tamriel. Bretons are half-elves who make naturally good magic users their mixed blood makes them good spellswords, they are also splendid cooks. High Elves AKA Altmer are the most magically gifted of the races of tamriel, they are also pompous people seeing themselves as gods among men. Woodelves, AKA Bosmer hail from Valenwood, a forest sanctuary untouched by most men, beast and other mer races. Orcs, or Orsimer are simillar to Nords, scorned and seen as barbaric, they are seen as savage by most elves. Known mostly for their brute strength and smithing skills. They Hail from the Wrothgarian Mountains in the borders of High Rock and Skyrim, there are also several settlements in Skyrim. Dark Elves or Dunmer are a mystical race of elves hailing from Morrowind, with the Red Mountain at its central island of Vvardenfell. Nords have a special hatred for them. They are known to be great wizards, but as seen with the Morag Tong, they can be deadly assassins."
             createrace()
         else:
             print "please remember to spell it out correctly"
@@ -435,7 +527,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             if random_event1reaction =="Fight back":
                 if fight_class == "Assassin":
                     time.sleep(1.75)
-                    print "little does this thief know that you're a trained assassin, you murder him to death and take his money + 80 gold"
+                    print "Little does this thief know that you're a trained assassin, you murder him to death and take his money + 80 gold"
                 elif strength > 34:
                     print "You easily fight off the bandit! He runs off with grave wounds"
                 elif strength > 24:
@@ -447,7 +539,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 elif agility > 34:
                     print "You happen to be quite the ninja, you quickly draw your", first_weapon, "and snatch the thief up quicker than a cake"
                 elif agility > 20:
-                    print "You make an attempt to quickly disarm the bandit, it works but you're injured (-10 health) you take the dagger and drive it into the thief's neck"
+                    print "You make an attempt to quickly disarm the bandit, it works but you're injured (-10 health) you take the dagger and drive it into the thief's neck  -10 health"
                     health -= 10
                 elif intelligence > 34:
                     print "You realize that there is a very steep hill just behind the thief, so you push him down"
@@ -528,6 +620,11 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "you have", str(gold), "gold"
                 print "Capitus' letter"
                 time.sleep(1)
+            elif inventory1 == "Yes":
+                print first_weapon
+                print fight_class, "'s armor"
+                print "you have", str(gold), "gold"
+                print "Capitus' letter"
             print ("You decide to read the letter:")
             time.sleep(1.4)
             if fight_class == "2S2C":
@@ -539,7 +636,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             else:
                 print "You're too stupid to read, so you continue walking blindly."
                 time.sleep(1)
-                print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
+                print "I'm not even sure if this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
                 intelligence += 10
         part5()
         def part6():
@@ -593,24 +690,28 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             if random_encounter3 == 22:
                 print "Dragon"
             if random_encounter3 == 23:
-                print ""    
+                print "3 Ogres"    
             if random_encounter3 == 24:
-                print "o"
+                print "Practical instadeath"
             if random_encounter3 == 25:
-                print "p"
+                print "Massive loot cache, followed by 5 werewolves."
             time.sleep(99999)
         part6()
     while True:
         part2()
 while True:
-    start = raw_input("press X to start ")
+    start = raw_input("press x to start ")
     if start == "x":
         skyrim()
     elif start == "Eseer":
         print "You found a platinum easter egg, Eseer is the greatest mortal being that we know of"
     elif start == "fus ro dah":
-        print "Sweet! You found a bronze easter egg, good job. This one was easy, there are still more"
+        print "Sweet! You found a bronze easter egg, good job! This one was easy, there are still many more"
+    elif start == "Fus Ro Dah":
+        print "Sweet! You found a bronze easter egg, good job! This one was easy, there are still many more"
     elif start == "sweet mother, sweet mother, send your child unto me, for the sins of the unworthy must be baptized in blood and fear":
-        print "By Sithis, you've discovered a silver Easter Egg, and Audience/others who read this, don't be alarmed, I'm not a murderer, thats a quote from the Dark Brotherhood, a band of assassins in Skyrim"
+        print "By Sithis, you've discovered a silver Easter Egg!" #Audience/others who read this, don't be alarmed, I'm not a murderer, thats a quote from the Dark Brotherhood, a band of assassins in Skyrim"
+    elif start == "Sweet mother, sweet mother, send your child unto me, for the sins of the unworthy must be baptized in blood and fear":
+        print "By Sithis, you've discovered a silver Easter Egg!"
     else:
-        print "press X to start"
+        print " "

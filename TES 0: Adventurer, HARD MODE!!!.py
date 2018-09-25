@@ -1,0 +1,1 @@
+#This is just for editing purposes, hard mode will be implemented as an option at the beginning of the original game. ,

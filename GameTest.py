@@ -1,5 +1,3 @@
-#This is where my final game will lie
-import
 import random
 prob = random.random()
 loading_screen = random.randrange(0,5)

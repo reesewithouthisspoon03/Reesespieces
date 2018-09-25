@@ -149,53 +149,135 @@ the trauma causes you to pass out'''
         race = raw_input("Choose your race (Orc, Redguard, Argonian, Breton, HighElf, DarkElf, WoodElf, Khajiit, Nord, Imperial) If you want info on each race, type 'info') FYI, the canon race is Imperial ")
         if race == "Orc":
             print "Orcs have brute strength, they are the most physically rigorous. +50 HEALTH!, + 25 strength -2 agility, -7 intelligence"
-            health += 25
-            strength += 15
-            intelligence -= 7
-            agility -= 2
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "Yes":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "Y":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "y":
+                health += 25
+                strength += 15
+                intelligence -= 7
+                agility -= 2
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
         elif race == "Redguard":
             print "Redguards are physically fit and agile, making them most useful as swordsmen +20 health +10 strength, +10 agility"
-            health += 20
-            strength += 10
-            agility += 10
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "Yes":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "Y":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "y":
+                health += 20
+                strength += 10
+                agility += 10
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
         elif race == "Imperial":
             print "Imperials conquered the tamrielic empire. They are very diplomatic as well +7.5 to all stats!"
-            health += 7.5
-            intelligence += 7.5
-            strength += 7.5
-            agility += 7.5
+            race_sure = raw_input("Are you sure you want to be this race?")
+            if race_sure == "yes":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "Yes":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "Y":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "y":
+                health += 7.5
+                intelligence += 7.5
+                strength += 7.5
+                agility += 7.5
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()
         elif race == "Khajiit":
             print "Khajiits are witty and agile. They make great warriors, thieves and assassins. +15 agility, +7 health, +7 intelligence, +10 strength"
+            race_sure = raw_input("Are you sure you want to be this race?")
             health +=7
             agility += 15
             intelligence += 7
             strength += 10
         elif race == "Breton":
             print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence, +5 strenth"
+            race_sure = raw_input("Are you sure you want to be this race?")
             intelligence += 30
             strength += 5
         elif race == "HighElf":
             print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. Arrogent pricks who think they're better than other races as well. +30 Intelligence, + 2 agility -5 health - 5 strength"
+            race_sure = raw_input("Are you sure you want to be this race?")
             health -= 5
             intelligence += 30
             agility += 5
         elif race == "Nord":
             print "Nord are tall,pale humans that have incredible resistance and strength. Racist against all other races +6 agility +5 health +20 strength"
+            race_sure = raw_input("Are you sure you want to be this race?")
             health += 5
             agility += 6
             strength += 20
         elif race == "DarkElf":
+            race_sure = raw_input("Are you sure you want to be this race?")
             print "Dark Elves are dark-skinned elves that are often targeted because of their status. They are historically good assasins in the Morag Tong and wizards like House Telvanni -5 health +30 intelligence, +10 agility"
             health -= 5
             intelligence += 30
             agility += 10
         elif race == "WoodElf":
+            race_sure = raw_input("Are you sure you want to be this race?")
             print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
             health += 5
             intelligence += 5
             agility += 20
             strength += 5
         elif race == "Argonian":
+            race_sure = raw_input("Are you sure you want to be this race?")
             print "Argonians are reptilian people that can breathe underwater and a resistant to many human diseases. +10 health +7 strength"
             health += 10
             strength += 10.5
