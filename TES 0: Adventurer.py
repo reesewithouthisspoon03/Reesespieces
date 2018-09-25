@@ -338,14 +338,9 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             global gold
             global fight_class
             fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
-            if fight_class == "Warrior":
-                print "A basic warrior +20 strength"
-                strength += 20
-            elif fight_class == "info":
+            if fight_class == "info":
                 print "Warrior, Thief, and Assassin are available right now. More coming soon"
-            fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), Atronach, Conjurer. And as with races, type 'info' for information on all classes ")
-            time.sleep(1)
-            if fight_class == "Warrior":
+            elif fight_class == "Warrior":
                 print "A basic warrior +25 strength"
                 strength += 20 
             elif fight_class == "Thief":
@@ -398,15 +393,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 health += 5
             else:
                 print "sorry that class isn't out yet"
-                fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
-                time.sleep(1)
-                if fight_class == "Warrior":
-                    print "A basic warrior +20 strength"
-                    strength += 20 
-                elif fight_class == "Assassin":
-                    print "Assassins are quick and cunning, +15 agility, +10 intelligence, +3 strength, (this one is buffed, silver achievment unlocked! 'Found an exploit!'"
-                else:
-                    class_select()
+                class_select()
         class_select()
         def part3():
             global fight_class
@@ -606,7 +593,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 time.sleep(1)
                 print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
                 intelligence += 10
-            if inventory1 == "no":
+            else:
                 print "Too bad, because it's an RPG, and I said you have to"
                 print first_weapon
                 print fight_class, "'s armor"
