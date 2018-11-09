@@ -554,12 +554,12 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 gold -= 100
                 time.sleep(1.75)
                 if agility > 30:
-                    print "but being an aspiring thief yourself, you pickpocket his money almost immediately after the thief turns around +210 gold"
-                    gold += 210
+                    print "but being an aspiring thief yourself, you pickpocket his money almost immediately after the thief turns around +250 gold"
+                    gold += 250
                 elif agility > 18:
                     print "after handing him only a few gold, you break free and sprint away. Good on you coward, but at least you didn't die. - 5 gold"
                 else:    
-                    print "the thief says, 'Did you really think I'd only ask for your money?' No, I want your life. He proceeds to slit your throat"
+                    print '''The thief says, "Did you really think I'd only ask for your money? No, I want your life as well." He proceeds to slit your throat'''
                     time.sleep(1)
                     print "You died? This was so easy though!!! oh well, go back and maybe you'll learn something useful"
                     time.sleep(4)

@@ -445,15 +445,15 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             second_quest = raw_input("What do you think your destiny is?(To exact revenge! To find out who the black robed figure is, To forget about my past")
             if second_quest == "To exact revenge!":
                 print "You're a firey soul, be careful that the flame does not consume you... No buff, this is HARD MODE!!!"
-                strength += 5
+                strength += 0
             elif second_quest == "To find out who the black robed figure is":
                 print "You are inquisitive... I admire that. Remember that the truth is often obtained through great struggle, and it may not be what you except it to be. No buff, this is HARD MODE!!!"
-                intelligence += 5
+                intelligence += 0
             elif second_quest == "To forget about my past":
                 print "So you wish to go rouge? Fate is strong, but if your will and intent is good and strong, you may overcome it. No buff, this is HARD MODE!!!"
             else:
                 print "I see, perhaps you will. I'm not a prophet you know, however great wisdom I have may be. In time you shall discover your destiny whatever it may be. No buff, this is HARD MODE!!!"
-                fun += 5
+                fun += 0
             print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
             global first_weapon
             first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, An enchanted staff{just type 'staff'.) your weapon's usefulness depends on your stats ")

@@ -18,6 +18,8 @@ global fun
 fun = 10
 global gold
 gold = 100
+global dead
+dead = 0
 print ("Rever Monde presents...")
 time.sleep(1)
 print ("An Elder Scrolls parody...")
@@ -38,6 +40,8 @@ def skyrim():
     fun = 10
     global gold
     gold = 100
+    global dead
+    dead = 0
     print "Launching skyrim_80.exe"
     print "Initializing data"
     time.sleep(1)
@@ -143,6 +147,7 @@ the trauma causes you to pass out'''
         global agility
         global fun
         global gold
+        global dead
         print "CREATE YOUR CHARACTER"
         time.sleep(1)
         global race
@@ -242,48 +247,220 @@ the trauma causes you to pass out'''
         elif race == "Khajiit":
             print "Khajiits are witty and agile. They make great warriors, thieves and assassins. +15 agility, +7 health, +7 intelligence, +10 strength"
             race_sure = raw_input("Are you sure you want to be this race?")
-            health +=7
-            agility += 15
-            intelligence += 7
-            strength += 10
+            if race_sure == "yes":
+                health +=7
+                agility += 15
+                intelligence += 7
+                strength += 10
+            elif race_sure == "Yes":
+                health +=7
+                agility += 15
+                intelligence += 7
+                strength += 10
+            elif race_sure == "Y":
+                health +=7
+                agility += 15
+                intelligence += 7
+                strength += 10
+            elif race_sure == "y":
+                health +=7
+                agility += 15
+                intelligence += 7
+                strength += 10
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()
         elif race == "Breton":
             print "Bretons are derived from human and elven ancestry. They possess great intelligence and are abstract thinkers, +30 intelligence, +5 strenth"
             race_sure = raw_input("Are you sure you want to be this race?")
-            intelligence += 30
-            strength += 5
+            if race_sure == "yes":
+                intelligence += 30
+                strength += 5
+            elif race_sure == "Yes":
+                intelligence += 30
+                strength += 5
+            elif race_sure == "Y":
+                intelligence += 30
+                strength += 5
+            elif race_sure == "y":
+                intelligence += 30
+                strength += 5
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()            
         elif race == "HighElf":
             print "High Elves are naturally gifted in the arcane. They make the best mages in Tamriel. Arrogent pricks who think they're better than other races as well. +30 Intelligence, + 2 agility -5 health - 5 strength"
             race_sure = raw_input("Are you sure you want to be this race?")
-            health -= 5
-            intelligence += 30
-            agility += 5
+            if race_sure == "yes":
+                health -= 5
+                intelligence += 30
+                agility += 5
+            elif race_sure == "Yes":
+                health -= 5
+                intelligence += 30
+                agility += 5
+            elif race_sure == "Y":
+                health -= 5
+                intelligence += 30
+                agility += 5
+            elif race_sure == "y":
+                health -= 5
+                intelligence += 30
+                agility += 5
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()            
         elif race == "Nord":
-            print "Nord are tall,pale humans that have incredible resistance and strength. Racist against all other races +6 agility +5 health +20 strength"
+            print "Nord are tall, pale humans that have incredible resistance and strength. Downside is, they're racist against all other races and not known for their intellect +6 agility +5 health +20 strength"
             race_sure = raw_input("Are you sure you want to be this race?")
-            health += 5
-            agility += 6
-            strength += 20
+            if race_sure == "yes":
+                health += 5
+                agility += 6
+                strength += 20
+            elif race_sure == "Yes":
+                health += 5
+                agility += 6
+                strength += 20
+            elif race_sure == "Y":
+                health += 5
+                agility += 6
+                strength += 20
+            elif race_sure == "y":
+                health += 5
+                agility += 6
+                strength += 20
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()                    
         elif race == "DarkElf":
             race_sure = raw_input("Are you sure you want to be this race?")
             print "Dark Elves are dark-skinned elves that are often targeted because of their status. They are historically good assasins in the Morag Tong and wizards like House Telvanni -5 health +30 intelligence, +10 agility"
-            health -= 5
-            intelligence += 30
-            agility += 10
+            if race_sure == "yes":
+                health -= 5
+                intelligence += 30
+                agility += 10
+            elif race_sure == "Yes":
+                health -= 5
+                intelligence += 30
+                agility += 10
+            elif race_sure == "Y":
+                health -= 5
+                intelligence += 30
+                agility += 10
+            elif race_sure == "y":
+                health -= 5
+                intelligence += 30
+                agility += 10
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()                    
         elif race == "WoodElf":
             race_sure = raw_input("Are you sure you want to be this race?")
             print "Wood Elves live in the forests of Valenwood. They make excellent rangers +5 health +5 intelligence +20 agility +5 strength"
-            health += 5
-            intelligence += 5
-            agility += 20
-            strength += 5
+            if race_sure == "yes":
+                health += 5
+                intelligence += 5
+                agility += 20
+                strength += 5
+            elif race_sure == "Yes":
+                health += 5
+                intelligence += 5
+                agility += 20
+                strength += 5
+            elif race_sure == "Y":
+                health += 5
+                intelligence += 5
+                agility += 20
+                strength += 5
+            elif race_sure == "y":
+                health += 5
+                intelligence += 5
+                agility += 20
+                strength += 5
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()                    
         elif race == "Argonian":
             race_sure = raw_input("Are you sure you want to be this race?")
             print "Argonians are reptilian people that can breathe underwater and a resistant to many human diseases. +10 health +7 strength"
-            health += 10
-            strength += 10.5
-            agility += 7
+            if race_sure == "yes":
+                health += 10
+                strength += 10.5
+                agility += 7
+            elif race_sure == "Yes":
+                health += 10
+                strength += 10.5
+                agility += 7
+            elif race_sure == "Y":
+                health += 10
+                strength += 10.5
+                agility += 7
+            elif race_sure == "y":
+                health += 10
+                strength += 10.5
+                agility += 7
+            elif race_sure == "No":
+                createrace()
+            elif race_sure == "no":
+                createrace()
+            elif race_sure == "N":
+                createrace()
+            elif race_sure == "n":
+                createrace()
+            else:
+                print "wow, you happened to pick some kind of affirmative that I didn't include, try again buddy"
+                createrace()                    
+
         elif race == "info":
-            print "Argonians are waterbreathing reptillian people, they have a longstanding and mutual hatred against Dark Elves, Nords are very strong and cold resistant and are often critisized as barbaric, Imperials are well rounded as any class they have been reguarded as great scholars, warriors, and thieves of past, however their biggest trump card is diplomacy. Redguards are well rounded in combat as anything but a mage they hail from Hammerfell, which is dominated by the Alik'r Desert, as such they are resistant to heat and poison of some creatures. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, however many outside of their homeland of Elsweyr are members of caravans, they have a weakness to moonsugar and skooma two very addictive drugs in tamriel. Bretons are half-elves who make naturally good magic users. High Elves AKA Altmer are the most magically gifted of the races of tamriel. Woodelves, AKA Bosmer hail from Valenwood, a forest sanctuary untouched by most men and other mer races."
+            print "Argonians are waterbreathing reptillian people, they have a longstanding and mutual hatred against Dark Elves, they are native to Black Marsh and seem to worship and belong to a sentient species of tree known as The Hist. Nords are very strong and cold resistant and are often critisized as barbaric, Imperials are well rounded as any class they have been reguarded as great scholars, warriors, and thieves of past, however their biggest trump card is diplomacy. Redguards are well rounded in combat as anything but a mage, they hail from Hammerfell, which is dominated by the Alik'r Desert, as such they are resistant to heat and poison of some creatures. Khajiit are nimble feline humanoids, they get bad reputations as thieves and pickpockets, however many outside of their homeland of Elsweyr are members of caravans, they have a weakness to moonsugar and skooma two very addictive drugs in tamriel. Bretons are half-elves who are naturally gifted in one or more arcane arts. High Elves AKA Altmer are the most magically gifted of the races of tamriel they see themselves as the most superior race and have proven so by putting the empire under their thumb. Woodelves, AKA Bosmer hail from Valenwood, a forest sanctuary untouched by most men and other mer races. Orcs AKA Orsimer are the outcast elvish race that specializes in honor-bound brutal combat. Dark Elves (Dunmer) too are a scorned race in the world. They are proven mages and assassins, but are certainly not pushovers in a physical fight. Their homeland of Morrowind is dominated by the Red Mountian, thus they have a spiritual connection to fire."
             createrace()
         else:
             print "please remember to spell it out correctly"
@@ -298,6 +475,7 @@ the trauma causes you to pass out'''
         global agility
         global fun
         global gold
+        global dead
         time.sleep(1)
         print '''ten years now, it's been ten years
 since I lost my parents. Killed by bandits the townsfold said,
@@ -314,12 +492,13 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
         if stand == "o":
             print "Bronze achievment unlocked! 'YOU HAVE LEGS'"
             time.sleep(1.5)
-            print "you stand up and stretch your legs, you go into your chest and pick out your outfit"
+            print "you stand up and stretch your legs, go into your chest and pick out your outfit"
         else:
             print "you fail to move your legs, YOU'RE PARALYZED"
             time.sleep(1)
             print "you died from paralysis"
             print "you got rekt"
+            dead += 1
             time.sleep(1)
             try_again = raw_input("wanna have another go at it?")
             if try_again == "yes":
@@ -336,6 +515,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             global agility
             global fun
             global gold
+            global dead
             global fight_class
             fight_class = raw_input("What equipment do you wear? (AKA, what's your class) (Warrior, Thief, Mage, Knight, Spellsword, Archer, Assassin, Adventurer, Too Swole To Control (2S2C), atronach, conjurer. And as with races, type 'info' for information on all classes")
             if fight_class == "info":
@@ -391,6 +571,14 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 intelligence += 15
                 agility += 5
                 health += 5
+            elif fight_class == "Esser":
+                print "A fucking GOD! (This is basically god mode so have fun with that) +Infinity to all stats! Also hidden secrets have been unlocked as well as unlimited gold"
+                health += 99999999999999
+                agility += 99999999999999
+                intelligence += 99999999999999
+                strength += 99999999999999
+                fun += 99999999999999
+                gold += 99999999999999
             else:
                 print "sorry that class isn't out yet"
                 class_select()
@@ -403,6 +591,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             global agility
             global fun
             global gold
+            global dead
             print "Yes, your uncle taught you how to be a", fight_class, "but if you want to exact revenge, you'll need to be stronger."
             time.sleep(2)
             print "speaking of your uncle, you should go see him."
@@ -417,15 +606,19 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "bandits pick you off within hours and loot your corpse"
                 time.sleep(1)
                 print "you got rekt"
+                dead += 1
                 time.sleep(1)
                 try_again = raw_input("wanna have another go at it? ")
                 if try_again == "yes":
                     part2()
                 else:
                     print "why can't you type a simple 'yes'? you aren't worthy of my game"
+                    dead += 1
                     time.sleep(9999999)
+                    skyrim()
             else:
                 print("I said type 'yes' or 'no', follow directions next time")
+                dead += 1
                 part2()
             print "He looks to you with weary eyes and says", name, "You are 18 now. Your time has come. Today is the day that you leave and fulfill your destiny"
             second_quest = raw_input("What do you think your destiny is?(To exact revenge! To find out who the black robed figure is, To forget about my past")
@@ -443,9 +636,10 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 fun += 5
             print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
             global first_weapon
-            first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, An enchanted staff{just type 'staff'.) your weapon's usefulness depends on your stats ")
+            first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, Greatsword, an enchanted staff{just type 'staff'.) your weapon's usefulness depends on your stats.")
+            print "Since I like you, lets get some stat boosts. I'll "
             if first_weapon == "Sword + Shield":
-                print "Achievement unlocked! Basic Warrior"
+                print "Achievement unlocked! Classic Warrior"
                 time.sleep(1.7)
                 print "Obtained Sword + Shield!"
             elif first_weapon == "Bow and Quiver":
@@ -457,17 +651,20 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 time.sleep(1.7)
                 print "Obtained Warhammer!"
             elif first_weapon == "Daggers":
-                print "Achievement unlocked! 'stab time!!!'"
+                print "Achievement unlocked! 'Stabby time!!!'"
                 time.sleep(1.7)
                 print "Obtained daggers!"
             elif first_weapon == "staff":
                 print "Achievement unlocked! 'Magic stuff'"
                 time.sleep(1.7)
                 print "Obtained Enchanted Staff"
+            elif first_weapon == "Greatsword":
+                print "Achievement unlocked! 'Slice 'em up'"
+                time.sleep(1.7)
             else:
                 print "You chose 'nothing'!"
                 time.sleep(1.2)
-                print '''trash achievment unlocked, "no hands"'''
+                print '''trash achievment unlocked, "Look Ma! No hands"'''
                 time.sleep(0.5)
                 print "you go out into the world without a weapon"
                 time.sleep(1.2)
@@ -490,6 +687,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             global fun
             global gold
             global first_weapon
+            global dead
             see_stats = raw_input("Would you like to see your stats? ")
             if see_stats == ("yes"):
                 print "health is" + str(health)
@@ -497,9 +695,12 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "intelligence is" + str(intelligence)
                 print "agility is" + str(agility)
                 print "and you have" + str(gold), "gold"
-                if see_stats == ("super"):
-                    print "fun is" +str(fun)
-                part4()
+            elif see_stats == ("super"):
+                print "fun is" +str(fun)
+            elif see_stats == ("dead"):
+                print "you died", + str(dead), "times"
+            part4()
+            time.sleep(3)
             print "A thief sneaks up behind you with a knife to your throat and demands your money"
             random_event1reaction = raw_input("How do you deal with the thief? Give in? Fight back? Pursuade?  ")
             if random_event1reaction =="Fight back":
@@ -522,10 +723,11 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 elif intelligence > 34:
                     print "You realize that there is a very steep hill just behind the thief, so you push him down"
                 else:
-                    print "You wet yourself and the bandit instantly slits your throat out of disgust"
-                    time.sleep(1.5)
-                    print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things differ"
-                    ()
+                    if fun > 5:
+                        print "You wet yourself and the bandit instantly slits your throat out of disgust"
+                        time.sleep(1.5)
+                        print "you're dead? And from wetting yourself? Get a hold of yourself!!! Go back and do things different"
+                        part4()
             elif random_event1reaction == "Give in":
                 print "you were given some money by Capitus, the thief demands it all, you oblige"
                 time.sleep(1.75)
@@ -585,7 +787,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 if fight_class == "2S2C":
                   print "You cannot read, however your muslces are able to absorb the knowledge of the letter."
                   time.sleep (2)
-                  print ("Your muscles determine from the letter than your uncle Capitus knows more about your parents' death.")
+                  print ("Your muscles determine from the letter that your uncle Capitus knows more about your parents' death.")
                 elif intelligence > 0:
                     print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin")
                 else:
@@ -607,12 +809,13 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                   time.sleep (2)
                   print ("Your muscles determine from the letter than your uncle Capitus knows more about your parents' death.")
                 elif intelligence > 0:
-                    print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin")
+                    print ("It says: I know more about your parents' death than I've let on, it was never safe to talk about it in the cabin, continue with your path, I will meet you soon")
+                    #Uncle Capitus is going to be found dead later on
                 else:
                     print "You're too stupid to read, so you continue walking blindly."
-                time.sleep(1)
-                print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
-                intelligence += 10
+                    time.sleep(1)
+                    print "I'm not even sure how this is possible without being 2S2C, and they have their own thing, props to you, so I'll give you a freebie, +10 intelligence"
+                    intelligence += 10
         part5()
         def part6():
             global fight_class
