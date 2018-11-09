@@ -694,7 +694,8 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             if random_encounter3 == 24:
                 print "Practical instadeath"
             if random_encounter3 == 25:
-                print "Massive loot cache, followed by 5 werewolves."
+                print "Massive loot cache", time.sleep (0.25), print ".", time.sleep (0.25), print ".", time.sleep (0.25), print "."
+                print "followed by 5 werewolves."
             time.sleep(99999)
         part6()
     while True:

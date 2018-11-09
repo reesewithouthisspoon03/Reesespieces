@@ -6,6 +6,8 @@ loading_screen = random.randrange(0,5)
 loading_screen2 = random.randrange(0,5)
 loading_screen3 = random.randrange(0,5)
 #variables
+global bandit_armor
+bandit_armor = 0
 global health 
 health = 100
 global strength 
@@ -133,7 +135,7 @@ you heard them come in asking for you by name:'''
     else:
         fun = 10
         fun += 1
-    print ("You know why we're. Bring us", name, "and we'll be on our way.")
+    print "You know why we're. Bring us", name, "and we'll be on our way."
     time.sleep(1)
     print '''You hear your parents say together, "we'd die before we let that happen."
 the reply was nothing except both of their dying breaths, let out in a shriek...
@@ -637,29 +639,50 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             print "You must go now, and discover your destiny, take this, it's quite dangerous to go alone."
             global first_weapon
             first_weapon = raw_input("What weapon do you recieve? (Sword + Shield, Warhammer, Bow and Quiver, Daggers, Greatsword, an enchanted staff{just type 'staff'.) your weapon's usefulness depends on your stats.")
-            print "Since I like you, lets get some stat boosts. I'll "
+            time.sleep(1.9)
+            print "Since I like you, lets get some stat boosts."
             if first_weapon == "Sword + Shield":
                 print "Achievement unlocked! Classic Warrior"
+                if dead < 1:
+                    print "and you get an extra +5 to health and + 5 to strength"
+                    health += 5
+                    strength += 5
                 time.sleep(1.7)
                 print "Obtained Sword + Shield!"
             elif first_weapon == "Bow and Quiver":
                 print "Achievement unlocked! 'Pointy Aren't They?'"
+                if dead < 1:
+                    print "and you get an extra +7 to agility and + 2 to strength"
+                    strength += 2
+                    agility += 7
                 time.sleep(1.7)
                 print "Obtained Bow and Quiver!"
             elif first_weapon == "Warhammer":
                 print "Achievement unlocked! 'A blunt instrument'"
+                if dead < 1:
+                    print "And you get an extra + 10 to strength"
+                    strength += 10
                 time.sleep(1.7)
                 print "Obtained Warhammer!"
             elif first_weapon == "Daggers":
                 print "Achievement unlocked! 'Stabby time!!!'"
+                if dead < 1:
+                    print "And you get an extra 2 to strength and 8 to agility!"
+                    strength += 2
+                    agility += 8
                 time.sleep(1.7)
                 print "Obtained daggers!"
             elif first_weapon == "staff":
                 print "Achievement unlocked! 'Magic stuff'"
+                if dead < 1:
+                    print "And you get an extra + 10 to intelligence!"
+                    intelligence += 10
                 time.sleep(1.7)
                 print "Obtained Enchanted Staff"
             elif first_weapon == "Greatsword":
                 print "Achievement unlocked! 'Slice 'em up'"
+                if dead < 1:
+                    print "and you get an extra +7 to strength and +3 to agility"
                 time.sleep(1.7)
             else:
                 print "You chose 'nothing'!"
@@ -669,11 +692,18 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
                 print "you go out into the world without a weapon"
                 time.sleep(1.2)
                 print "bandits assault you head on, with nothing to defend yourself, you are murdered in 30 seconds flat"
-                time.sleep(1.2)
-                print "GIT GUD!!!"
-                time.sleep(0.5)
-                print "try again"
-                part2()
+                if fun > 15:
+                    print "except they all clash together in a pile because they came at you at once"
+                    time.sleep(0.8)
+                    print "you pick off all of their armor and gold +Bandit armor x5 , +2000 gold!"
+                    gold += 2000
+                    bandit_armor += 5
+                else:
+                    time.sleep(1.2)
+                    print "GIT GUD!!!"
+                    time.sleep(0.5)
+                    print "try again"
+                    part2()
             print "Now go and discover your destiny"
             time.sleep(1.9)
             print "The tutorial is complete, welcome to The Elder Scrolls 0: Adventurer"
@@ -698,7 +728,7 @@ A grey man, that I'd never met before. He had kind eyes, with a tiredness to the
             elif see_stats == ("super"):
                 print "fun is" +str(fun)
             elif see_stats == ("dead"):
-                print "you died", + str(dead), "times"
+                print "you died" + str(dead), "times"
             part4()
             time.sleep(3)
             print "A thief sneaks up behind you with a knife to your throat and demands your money"
